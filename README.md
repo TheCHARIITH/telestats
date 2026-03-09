@@ -23,7 +23,7 @@
 Bash
 
 ```
-pip install telethon -q && curl -sL https://raw.githubusercontent.com/thecharith/telestats/main/telestats.py | python3
+pip install telethon -q && curl -sL https://raw.githubusercontent.com/thechariith/telestats/main/telestats.py | python3
 ```
 
 **One-liner (Windows PowerShell):**
@@ -31,7 +31,7 @@ pip install telethon -q && curl -sL https://raw.githubusercontent.com/thecharith
 PowerShell
 
 ```
-pip install telethon -q; irm https://raw.githubusercontent.com/thecharith/telestats/main/telestats.py | python
+pip install telethon -q; irm https://raw.githubusercontent.com/thechariith/telestats/main/telestats.py | python
 ```
 
 **With environment variables:**
