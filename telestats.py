@@ -20,6 +20,26 @@ def get_credentials():
     if api_id and api_hash:
         return int(api_id), api_hash
     
+    # Check if running in a pipe (non-interactive)
+    if not sys.stdin.isatty():
+        print("\n" + "="*60)
+        print("⚠️  TeleStats - Interactive Setup Required")
+        print("="*60)
+        print("\nYou're running this script in pipe mode.")
+        print("Please use environment variables instead:\n")
+        print("Linux/macOS:")
+        print("  TG_API_ID=123456 TG_API_HASH=abc123 \\")
+        print("  curl -sL URL | python3\n")
+        print("Windows PowerShell:")
+        print("  $env:TG_API_ID='123456'; $env:TG_API_HASH='abc123';")
+        print("  irm URL | python\n")
+        print("Or download and run directly:")
+        print("  curl -O https://raw.githubusercontent.com/thecharith/telestats/main/telestats.py")
+        print("  python3 telestats.py\n")
+        print("Get credentials at: https://my.telegram.org")
+        print("="*60)
+        sys.exit(1)
+    
     print("\n" + "="*60)
     print("⚡ TeleStats - Telegram Dashboard Generator")
     print("="*60)
